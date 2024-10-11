@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>function verificarPalindromo(palavra) {
+        // Converte a palavra para minúsculas para garantir a comparação correta
+        palavra = palavra.toLowerCase();
+        // Calcula o comprimento da palavra
+        const len = palavra.length;
+    
+        // Loop para verificar se a palavra é um palíndromo
+        for (let i = 0; i < len / 2; i++) {
+            if (palavra[i] !== palavra[len - 1 - i]) {
+                return 'Não é um palíndromo';
+            }
+        }
+        return 'É um palíndromo';
+    }
+    
+    // Solicita ao usuário para digitar uma palavra
+    const palavra = prompt('Digite uma palavra: ');
+    // Chama a função e exibe o resultado
+    const resultado = verificarPalindromo(palavra);
+    console.log(resultado);
+    </script>
+</body>
+</html>
+
+    

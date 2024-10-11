@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>// Cria um array de objetos com informações de 3 produtos
+        let produtos = [
+            { nome: 'Produto A', preco: 15.0, quantidade: 4 },
+            { nome: 'Produto B', preco: 22.0, quantidade: 3 },
+            { nome: 'Produto C', preco: 10.0, quantidade: 6 }
+        ];
+        
+        // Função que calcula o valor total do estoque
+        function calcularValorTotalEstoque(produtos) {
+            let valorTotal = 0;
+            for (let i = 0; i < produtos.length; i++) {
+                valorTotal += produtos[i].preco * produtos[i].quantidade;
+            }
+            return valorTotal;
+        }
+        
+        // Calcula o valor total do estoque e exibe o resultado no console
+        let valorTotalEstoque = calcularValorTotalEstoque(produtos);
+        console.log(`O valor total do estoque é: R$ ${valorTotalEstoque.toFixed(2)}`);
+        </script>
+</body>
+</html>

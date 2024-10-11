@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>// Cria um array vazio chamado tarefas
+        let tarefas = [];
+        
+        // Função para adicionar tarefas ao array
+        function adicionarTarefas() {
+            for (let i = 0; i < 5; i++) {
+                let tarefa = prompt(`Digite a tarefa ${i + 1}:`);
+                tarefas.push(tarefa);
+            }
+        }
+        
+        // Função para exibir todas as tarefas
+        function exibirTarefas() {
+            console.log("Tarefas:");
+            tarefas.forEach((tarefa, index) => {
+                console.log(`${index + 1}. ${tarefa}`);
+            });
+        }
+        
+        // Função para marcar uma tarefa como concluída
+        function concluirTarefa() {
+            let tarefaConcluida = prompt("Digite o número da tarefa que você deseja marcar como concluída:");
+            let indice = parseInt(tarefaConcluida) - 1;
+            if (indice >= 0 && indice < tarefas.length) {
+                tarefas.splice(indice, 1);
+                console.log("Tarefa concluída removida com sucesso!");
+            } else {
+                console.log("Número de tarefa inválido.");
+            }
+        }
+        
+        // Adiciona as tarefas ao array
+        adicionarTarefas();
+        
+        // Exibe todas as tarefas
+        exibirTarefas();
+        
+        // Marca uma tarefa como concluída e exibe a lista atualizada
+        concluirTarefa();
+        exibirTarefas();
+        </script>
+</body>
+</html>

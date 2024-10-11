@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>// Cria um array vazio para armazenar as informações das pessoas
+        let pessoas = [];
+        
+        // Função para adicionar pessoas ao array
+        function adicionarPessoas() {
+            for (let i = 0; i < 5; i++) {
+                let nome = prompt(`Digite o nome da pessoa ${i + 1}:`);
+                let idade = parseInt(prompt(`Digite a idade da pessoa ${i + 1}:`));
+                pessoas.push({ nome: nome, idade: idade });
+            }
+        }
+        
+        // Função para exibir os nomes das pessoas com mais de 18 anos
+        function exibirMaioresDeIdade() {
+            console.log("Pessoas com mais de 18 anos:");
+            for (let i = 0; i < pessoas.length; i++) {
+                if (pessoas[i].idade > 18) {
+                    console.log(pessoas[i].nome);
+                }
+            }
+        }
+        
+        // Adiciona as pessoas ao array
+        adicionarPessoas();
+        
+        // Exibe os nomes das pessoas com mais de 18 anos
+        exibirMaioresDeIdade();
+        </script>
+</body>
+</html

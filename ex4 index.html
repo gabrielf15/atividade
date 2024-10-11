@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>// Cria o objeto aluno
+        let aluno = {
+            nome: 'Marcelo',
+            notas: [7, 8, 9],
+            // Função para calcular a média das notas
+            media: function() {
+                let soma = 0;
+                for (let i = 0; i < this.notas.length; i++) {
+                    soma += this.notas[i];
+                }
+                return soma / this.notas.length;
+            }
+        };
+        
+        // Calcula a média e exibe a mensagem
+        let mediaNotas = aluno.media();
+        console.log(`O aluno ${aluno.nome} tem uma média de ${mediaNotas.toFixed(2)}`);
+        </script>
+    
+</body>
+</html>

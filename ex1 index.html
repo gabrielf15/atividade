@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>function calculadora(num1, num2, operacao) {
+        let resultado;
+        if (operacao === 'soma') {
+            resultado = num1 + num2;
+        } else if (operacao === 'subtracao') {
+            resultado = num1 - num2;
+        } else if (operacao === 'multiplicacao') {
+            resultado = num1 * num2;
+        } else if (operacao === 'divisao') {
+            if (num2 !== 0) {
+                resultado = num1 / num2;
+            } else {
+                return 'Erro: Divisão por zero';
+            }
+        } else {
+            return 'Operação inválida';
+        }
+        return resultado;
+    }
+    
+    // Testando a função com diferentes operações e números
+    console.log(calculadora(10, 5, 'soma')); // 15
+    console.log(calculadora(10, 5, 'subtracao')); // 5
+    console.log(calculadora(10, 5, 'multiplicacao')); // 50
+    console.log(calculadora(10, 5, 'divisao')); // 2
+    console.log(calculadora(10, 0, 'divisao')); // Erro: Divisão por zero
+    console.log(calculadora(10, 5, 'modulo')); // Operação inválida
+    </script>
+    
+</body>
+</html>
